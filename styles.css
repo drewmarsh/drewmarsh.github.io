@@ -79,7 +79,6 @@ body {
     background-color: rgba(0, 0, 0, 0.8); /* Slightly darker on hover */
 }
 
-
 /* Link Styles */
 a {
     color: #8adaff;
@@ -157,6 +156,7 @@ a:hover {
     display: block;
     margin-top: 10px;
 }
+
 /* Responsive Design */
 @media(max-width: 768px) {
     .container {
@@ -171,5 +171,69 @@ a:hover {
     .project-section, .skills {
         margin-top: 60px;
         margin-bottom: 60px;
+    }
+
+    .header {
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .header h1 {
+        font-size: 2.5rem;
+    }
+
+    .header p {
+        font-size: 1.5rem;
+    }
+
+    .social-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .project-section, .skills {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        padding: 20px 15px;
+    }
+
+    .project-section h2, .skills h2 {
+        font-size: 18px;
+        top: -40px;
+        padding: 8px 15px;
+    }
+
+    .project-item {
+        margin-top: 30px;
+    }
+
+    .skills img {
+        margin: 3px;
+    }
+}
+
+/* Additional styles for very small screens */
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .header p {
+        font-size: 1.25rem;
+    }
+
+    .project-section, .skills {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .project-section h2, .skills h2 {
+        font-size: 16px;
+        top: -35px;
     }
 }
