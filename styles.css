@@ -12,7 +12,7 @@ body {
     width: 80%;
     margin: auto;
     overflow: hidden;
-    padding: 0 20px;
+    padding: 20px;
 }
 
 /* Header Styles */
@@ -23,10 +23,10 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    user-select: none; /* Prevents text selection */
-    -webkit-user-select: none; /* For Safari */
-    -moz-user-select: none; /* For Firefox */
-    -ms-user-select: none; /* For IE10+/Edge */
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 .header-content {
@@ -56,45 +56,72 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Skills Section */
-.skills {
+/* Project Sections and Skills Section */
+.project-section, .skills {
     background: #000000b9;
-    padding: 20px;
-    margin-bottom: 20px;
+    padding: 10px 20px 20px;
+    margin-top: 80px;
+    margin-bottom: 80px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.project-section h2, .skills h2 {
+    color: #ffffff;
+    font-size: 24px;
+    background-color: #000000b9;
+    display: inline-block;
+    padding: 10px 20px;
+    position: absolute;
+    top: -63px;
+    left: 0px;
+    margin: 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.skills {
     text-align: center;
-    padding: 20px 0;
 }
 
 .skills img {
     margin: 5px;
 }
 
-/* Project Sections */
-.project-section {
-    background: #000000b9;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+.project-item {
+    margin-top: 15px;
 }
 
-.project-section h2 {
+.project-item h3 {
     color: #ffffff;
-    border-bottom: 0px;
-    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.project-item ul {
+    margin-top: 5px;
 }
 
 .project-item img {
     max-width: 100%;
     height: auto;
     display: block;
+    margin: 5px 0;
 }
 
 /* Responsive Design */
 @media(max-width: 768px) {
     .container {
         width: 95%;
+        padding: 10px;
+    }
+   
+    .project-section h2, .skills h2 {
+        font-size: 20px;
+    }
+    
+    .project-section, .skills {
+        margin-top: 60px;
+        margin-bottom: 60px;
     }
 }
