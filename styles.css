@@ -1,0 +1,100 @@
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #ffffff;
+    background: linear-gradient(to right, #6600cc, #0066cc);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+.header {
+    height: 24vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    user-select: none; /* Prevents text selection */
+    -webkit-user-select: none; /* For Safari */
+    -moz-user-select: none; /* For Firefox */
+    -ms-user-select: none; /* For IE10+/Edge */
+}
+
+.header-content {
+    padding: 20px;
+}
+
+.header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.header p {
+    font-size: 1.75rem;
+    font-weight: 300;
+}
+
+/* Link Styles */
+a {
+    color: #8adaff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #c892ff;
+    text-decoration: underline;
+}
+
+/* Skills Section */
+.skills {
+    background: #000000b9;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 20px 0;
+}
+
+.skills img {
+    margin: 5px;
+}
+
+/* Project Sections */
+.project-section {
+    background: #000000b9;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.project-section h2 {
+    color: #ffffff;
+    border-bottom: 0px;
+    padding-bottom: 10px;
+}
+
+.project-item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Responsive Design */
+@media(max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+}
