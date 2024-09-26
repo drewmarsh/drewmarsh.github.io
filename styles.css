@@ -66,8 +66,8 @@ body {
 .social-link:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-decoration: none; /* Ensures no underline on hover */
-    color: white; /* Keeps text color white on hover */
+    text-decoration: none;
+    color: white;
 }
 
 .linkedin, .github {
@@ -76,7 +76,7 @@ body {
 }
 
 .linkedin:hover, .github:hover {
-    background-color: rgba(0, 0, 0, 0.8); /* Slightly darker on hover */
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Link Styles */
@@ -94,12 +94,12 @@ a:hover {
 /* Project Sections and Skills Section */
 .project-section, .skills {
     background: #000000b9;
-    padding: 30px 20px 20px; /* Increased top padding */
-    margin-top: 60px; /* Increased top margin */
-    margin-bottom: 60px;
+    padding: 30px 20px 20px;
+    margin-top: 80px; /* Consistent space for the floating header */
+    margin-bottom: 40px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    position: relative;
+    position: relative; /* For positioning the header */
 }
 
 .project-section h2, .skills h2 {
@@ -109,11 +109,23 @@ a:hover {
     display: inline-block;
     padding: 10px 20px;
     position: absolute;
-    top: -30px; /* Adjusted to be closer to the section */
-    left: 0px;
+    top: -63px; /* Consistent pull up to float above the section */
+    left: 0;
     margin: 0;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Clear the float to prevent overlap */
+.project-section::after, .skills::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Ensure content doesn't overlap with floating header */
+.project-item:first-child {
+    margin-top: 10px;
 }
 
 .skills {
@@ -178,24 +190,25 @@ a:hover {
     }
 
     .social-links {
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
         gap: 10px;
     }
 
     .project-section, .skills {
-        margin-top: 50px; /* Increased for more space */
-        margin-bottom: 50px;
-        padding: 40px 15px 20px; /* Increased top padding */
+        padding: 25px 15px 15px;
+        margin-top: 70px; /* Adjusted but still maintaining significant space */
     }
 
     .project-section h2, .skills h2 {
-        font-size: 18px;
-        top: -25px; /* Adjusted to be closer to the section */
+        font-size: 20px;
         padding: 8px 15px;
+        top: -53px; /* Adjusted slightly but maintaining float */
     }
 
     .project-item {
-        margin-top: 20px; /* Reduced from 30px */
+        margin-top: 20px;
     }
 
     .skills img {
@@ -217,15 +230,20 @@ a:hover {
     .header p {
         font-size: 1.25rem;
     }
+
+    .social-link {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+    }
  
     .project-section, .skills {
-        margin-top: 50px;
-        margin-bottom: 50px;
-        padding: 35px 15px 20px;
+        padding: 20px 10px 10px;
+        margin-top: 60px; /* Further adjusted but still maintaining space */
     }
 
     .project-section h2, .skills h2 {
-        font-size: 16px;
-        top: -30px;
+        font-size: 18px;
+        padding: 6px 12px;
+        top: -43px; /* Adjusted but still maintaining significant float */
     }
 }
