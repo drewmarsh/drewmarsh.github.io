@@ -36,12 +36,13 @@ body {
 .header h1 {
     font-size: 3rem;
     font-weight: bold;
-    margin-bottom: 1rem;
+    margin-bottom: 0.4rem;
 }
 
 .header p {
     font-size: 1.75rem;
     font-weight: 300;
+    margin-top: 0.4rem;
 }
 
 /* Link Styles */
@@ -91,6 +92,7 @@ a:hover {
 
 .project-item {
     margin-top: 15px;
+    position: relative;
 }
 
 .project-item h3 {
@@ -102,13 +104,24 @@ a:hover {
     margin-top: 5px;
 }
 
-.project-item img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 5px 0;
+.project-item summary {
+    text-align: left;
+    margin-left: 15px;
+    cursor: pointer;
+    color: #969c9e;
+    font-style: italic;
 }
 
+.project-item details[open] summary {
+    margin-bottom: 20px;
+}
+
+.project-item details img {
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin-top: 10px;
+}
 /* Responsive Design */
 @media(max-width: 768px) {
     .container {
