@@ -167,7 +167,7 @@ blockquote {
     font-style: italic;
     margin: 10px 0;
     padding-left: 15px;
-    border-left: 3px solid #8adaff; /* Left border for emphasis */
+    border-left: 3px solid #8adaff; /* Optional: Add a left border for emphasis */
 }
 
 /* Responsive Design */
