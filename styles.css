@@ -161,12 +161,6 @@ a:hover {
     margin-top: 10px;
 }
 
-/* Align preview text with hyperlink */
-.project-item details summary {
-  display: inline-block;
-  vertical-align: middle;
-}
-
 /* Project Descriptions */
 blockquote {
     color: #969c9e; /* Grey color to match the preview text */
