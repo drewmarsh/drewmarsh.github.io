@@ -91,8 +91,8 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Project Sections and Skills Section */
-.project-section, .skills {
+/* Project Sections */
+.project-section {
     background: #000000b9;
     padding: 30px 20px 20px;
     margin-top: 80px; /* Consistent space for the floating header */
@@ -102,7 +102,7 @@ a:hover {
     position: relative; /* For positioning the header */
 }
 
-.project-section h2, .skills h2 {
+.project-section h2 {
     color: #ffffff;
     font-size: 24px;
     background-color: #000000b9;
@@ -117,7 +117,7 @@ a:hover {
 }
 
 /* Clear the float to prevent overlap */
-.project-section::after, .skills::after {
+.project-section::after {
     content: "";
     display: table;
     clear: both;
@@ -126,14 +126,6 @@ a:hover {
 /* Ensure content doesn't overlap with floating header */
 .project-item:first-child {
     margin-top: 10px;
-}
-
-.skills {
-    text-align: center;
-}
-
-.skills img {
-    margin: 5px;
 }
 
 .project-item {
@@ -169,6 +161,15 @@ a:hover {
     margin-top: 10px;
 }
 
+/* Project Descriptions */
+blockquote {
+    color: #969c9e; /* Grey color to match the preview text */
+    font-style: italic;
+    margin: 10px 0;
+    padding-left: 15px;
+    border-left: 3px solid #8adaff; /* Left border for emphasis */
+}
+
 /* Responsive Design */
 @media(max-width: 768px) {
     .container {
@@ -196,12 +197,12 @@ a:hover {
         gap: 10px;
     }
 
-    .project-section, .skills {
+    .project-section {
         padding: 25px 15px 15px;
         margin-top: 70px; /* Adjusted but still maintaining significant space */
     }
 
-    .project-section h2, .skills h2 {
+    .project-section h2 {
         font-size: 20px;
         padding: 8px 15px;
         top: -53px; /* Adjusted slightly but maintaining float */
@@ -209,10 +210,6 @@ a:hover {
 
     .project-item {
         margin-top: 20px;
-    }
-
-    .skills img {
-        margin: 3px;
     }
 }
 
@@ -236,12 +233,12 @@ a:hover {
         font-size: 0.9rem;
     }
  
-    .project-section, .skills {
+    .project-section {
         padding: 20px 10px 10px;
         margin-top: 60px; /* Further adjusted but still maintaining space */
     }
 
-    .project-section h2, .skills h2 {
+    .project-section h2 {
         font-size: 18px;
         padding: 6px 12px;
         top: -43px; /* Adjusted but still maintaining significant float */
