@@ -161,6 +161,38 @@ a:hover {
     margin-top: 10px;
 }
 
+/* Style the disclosure triangle (summary) */
+.project-item details summary {
+  list-style: none; /* Hide default triangle */
+  padding-left: 0; /* Align with hyperlink */
+  margin-left: 0; /* Remove default margin */
+  color: #8adaff; /* Match hyperlink color */
+}
+
+/* Custom triangle using a pseudo-element */
+.project-item details summary::-webkit-details-marker {
+  display: none; /* Hide default triangle in WebKit browsers */
+}
+
+.project-item details summary::before {
+  content: "▶"; /* Unicode triangle */
+  color: #8adaff; /* Blue color to match links */
+  font-size: 0.8em;
+  margin-right: 8px;
+  transition: transform 0.2s;
+}
+
+/* Rotate triangle when details are open */
+.project-item details[open] summary::before {
+  transform: rotate(90deg);
+}
+
+/* Align preview text with hyperlink */
+.project-item details summary {
+  display: inline-block;
+  vertical-align: middle;
+}
+
 /* Project Descriptions */
 blockquote {
     color: #969c9e; /* Grey color to match the preview text */
